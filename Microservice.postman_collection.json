@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "4adba303-79af-4480-8ea0-1e69e4d4c1dc",
+		"name": "Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Book Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 100,\n    \"name\" : \"Mobile\",\n    \"qty\" : \"1\",\n    \"price\" : 10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/order/bookOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"order",
+						"bookOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Do Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paymentStatus\" : \"success\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9192/payment/doPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"payment",
+						"doPayment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
